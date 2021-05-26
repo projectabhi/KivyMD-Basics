@@ -1,0 +1,4 @@
+Flow
+Screen -> NavigationLayout -> ScreenManager -> Screen -> BoxLayout -> MDToolbar + widget
+Screen -> NavigationLayout -> MDNavigationDrawer
+
