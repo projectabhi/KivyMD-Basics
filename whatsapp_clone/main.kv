@@ -4,6 +4,13 @@
         text: "Tab 0"
         halign: "center"
 
+<TabWithIcon>
+    MDIconButton:
+        id: icon
+        icon: root.icon
+        user_font_size: "20sp"
+        pos_hint: {"center_x": .5, "center_y": .5}
+
 BoxLayout:
     orientation: 'vertical'
     MDToolbar:
@@ -12,7 +19,8 @@ BoxLayout:
     MDTabs:
         id: android_tabs
         on_tab_switch: app.on_tab_switch(*args)
-        color: 'Black'
+        TabWithIcon:
+            icon: 'camera'
         Tab:
             text: 'Calls'
         Tab:

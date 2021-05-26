@@ -1,11 +1,17 @@
 from kivymd.app import MDApp
 from kivymd.uix import FloatLayout
+from kivymd.uix.button import MDIconButton
+from kivymd.uix.floatlayout import MDFloatLayout
 from kivymd.uix.tab import MDTabsBase
 from kivy.lang import Builder
 from kivymd.uix.list import TwoLineAvatarIconListItem, ImageLeftWidget, IconRightWidget
 
 
 class Tab(FloatLayout, MDTabsBase):
+    pass
+
+
+class TabWithIcon(MDFloatLayout, MDTabsBase):
     pass
 
 
@@ -25,8 +31,12 @@ class DemoTab(MDApp):
         :param instance_tab_label: <kivymd.uix.tab.MDTabsLabel object>;
         :param tab_text: text or name icon of tab;
         '''
-        print(tab_text)
-        instance_tab.ids.label.text = ""
+        if (instance_tab.icon):
+            print(instance_tab.icon)
+            instance_tab.ids.icon.icon = ""
+        else:
+            print(tab_text)
+            instance_tab.ids.label.text = ""
 
     def new_message(self, name, text, image_location):
         new_message = TwoLineAvatarIconListItem(text=name, secondary_text=text)
