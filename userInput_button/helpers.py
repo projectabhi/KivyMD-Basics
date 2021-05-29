@@ -1,7 +1,7 @@
 username_helper = """
 MDTextField:
     hint_text: "Enter username"
-    helper_text: "Used for login"
+    helper_text: "Used for login_page"
     helper_text_mode: "on_focus"
     icon_right: "android"
     icon_right_color: app.theme_cls.primary_color

@@ -1,10 +1,9 @@
+from kivy.lang import Builder
 from kivymd.app import MDApp
 from kivymd.uix import FloatLayout
-from kivymd.uix.button import MDIconButton
 from kivymd.uix.floatlayout import MDFloatLayout
-from kivymd.uix.tab import MDTabsBase
-from kivy.lang import Builder
 from kivymd.uix.list import TwoLineAvatarIconListItem, ImageLeftWidget, IconRightWidget
+from kivymd.uix.tab import MDTabsBase
 
 
 class Tab(FloatLayout, MDTabsBase):

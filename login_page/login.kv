@@ -1,0 +1,73 @@
+MDScreen:
+    name: "LoginPage"
+    on_enter:
+        app.anim(back)
+        app.anim1(back1)
+        app.icon_animate(icon)
+        app.text_animate(login_label)
+    MDFloatLayout:
+        MDFloatLayout:
+            id: back
+            size_hint_y: .6
+            pos_hint: {"center_y": 1.8}
+            radius: [0,0,0,40]
+            canvas:
+                Color:
+                    rgb: (0,0,1,1)
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        MDFloatLayout:
+            id: back1
+            size_hint_y: .6
+            pos_hint: {"center_y": 1.8}
+            radius: [0,0,0,40]
+            canvas:
+                Color:
+                    rgb: (0,0,1,1)
+                Ellipse:
+                    size: self.size
+                    pos: self.pos
+        MDIconButton:
+            id: icon
+            icon: "account-circle"
+            pos_hint: {"center_x": .5,"center_y": .8}
+            user_font_size: "50sp"
+            theme_text_color: "Custom"
+            text_color: 1,1,1,1
+        MDLabel:
+            id: login_label
+            text: f"[font=Arial]Login[/font]"
+            markup: True
+            pos_hint: {"center_y": .70}
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 1,1,1,1
+            font_style: "H5"
+            opacity: 0
+        MDTextField:
+            hint_text: "Enter your mobile no"
+            size_hint_x: .8
+            pos_hint: {"center_x": .5,"center_y": .4}
+            current_hint_text_color: 0,0,1,1
+            color_mode: "custom"
+            line_color_focus: 0,0,1,1
+        MDTextField:
+            hint_text: "Enter your password"
+            size_hint_x: .8
+            pos_hint: {"center_x": .5,"center_y": .3}
+            current_hint_text_color: 0,0,1,1
+            password: True
+            color_mode: "custom"
+            line_color_focus: 0,0,1,1
+        MDRaisedButton:
+            text: "Login"
+            pos_hint: {"center_x": .5,"center_y": .2}
+            size_hint: None, None
+            width: dp(200) + (self.ids.lbl_txt.texture_size[0] - self.ids.lbl_txt.texture_size[0])
+            height: dp(200)
+            md_bg_color: 0,0,1,1
+        MDTextButton:
+            text: "Forgot password?"
+            pos_hint: {"center_x": .5,"center_y": .1}
+            custom_color: 0,0,1,1
